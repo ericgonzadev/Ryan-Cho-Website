@@ -1,212 +1,204 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <title>Ryan Cho</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-  </head>
-  <body id="top">
-      <!-- Banner -->
-      <section id="banner" data-video="<%= asset_path '/banner' %>">
-        <div class="inner">
-          <header>
-            <h1><%= @information.name %></h1>
-            <h2><%= @information.headline %></h2>
-            <p><%= @information.headline_description %></p>
-          </header>
-          <a href="#about" class="more">Learn More</a>
-        </div>
-      </section>
+<!-- Banner -->
+    <section id="banner" data-video="<%= asset_path '/banner' %>">
+      <div class="inner">
+        <header>
+          <h1><%= @information.name %></h1>
+          <h2><%= @information.headline %></h2>
+          <p><%= @information.headline_description %></p>
+        </header>
+        <a href="#about" class="more">Learn More</a>
+      </div>
+    </section>
 
-      <!-- About -->
-      <div class="container" id="about">
-        <div class="row">
-          <div class="col-lg-6">
-            <%= image_tag("about.jpg") %>
-          </div>
-          <div class="col-lg-6">
-            <h2 class="headline">About Me</h2>
-            <p><%= @information.about_me %></p>
-          </div>
+    <!-- About -->
+    <div class="container" id="about">
+      <div class="row">
+        <div class="col-lg-6">
+          <%= image_tag("about.jpg") %>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="headline">About Me</h2>
+          <p><%= @information.about_me %></p>
         </div>
       </div>
+    </div>
 
-      <!-- Main -->
-      <div id="main">
-        <div class="row">
-          <div class="col-lg-12">
-            <h2 class="headline">Freelance Work</h2>
-          </div>
-        </div>
-        <div class="inner">
-          <!-- Boxes -->
-          <div class="thumbnails">
-            <div class="box">
-              <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="" alt="" /></a>
-              <div class="inner">
-                <h3>Nascetur nunc varius commodo</h3>
-                <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Watch</a>
-              </div>
-            </div>
-
-            <div class="box">
-              <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic02.jpg" alt="" /></a>
-              <div class="inner">
-                <h3>Nascetur nunc varius commodo</h3>
-                <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Watch</a>
-              </div>
-            </div>
-
-            <div class="box">
-              <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic03.jpg" alt="" /></a>
-              <div class="inner">
-                <h3>Nascetur nunc varius commodo</h3>
-                <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Watch</a>
-              </div>
-            </div>
-
-            <div class="box">
-              <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic04.jpg" alt="" /></a>
-              <div class="inner">
-                <h3>Nascetur nunc varius commodo</h3>
-                <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Watch</a>
-              </div>
-            </div>
-
-            <div class="box">
-              <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic05.jpg" alt="" /></a>
-              <div class="inner">
-                <h3>Nascetur nunc varius commodo</h3>
-                <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Watch</a>
-              </div>
-            </div>
-
-            <div class="box">
-              <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic06.jpg" alt="" /></a>
-              <div class="inner">
-                <h3>Nascetur nunc varius commodo</h3>
-                <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Watch</a>
-              </div>
-            </div>
-
-          </div>
-
+    <!-- Main -->
+    <div id="main">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="headline">Freelance Work</h2>
         </div>
       </div>
-
-      <!-- Main -->
-      <div id="main">
-        <div class="row">
-          <div class="col-lg-12">
-            <h2 class="headline">Portfolio</h2>
+      <div class="inner">
+        <!-- Boxes -->
+        <div class="thumbnails">
+          <div class="box">
+            <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="" alt="" /></a>
+            <div class="inner">
+              <h3>Nascetur nunc varius commodo</h3>
+              <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
+              <a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Watch</a>
+            </div>
           </div>
+
+          <div class="box">
+            <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic02.jpg" alt="" /></a>
+            <div class="inner">
+              <h3>Nascetur nunc varius commodo</h3>
+              <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
+              <a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Watch</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic03.jpg" alt="" /></a>
+            <div class="inner">
+              <h3>Nascetur nunc varius commodo</h3>
+              <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
+              <a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Watch</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic04.jpg" alt="" /></a>
+            <div class="inner">
+              <h3>Nascetur nunc varius commodo</h3>
+              <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
+              <a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Watch</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic05.jpg" alt="" /></a>
+            <div class="inner">
+              <h3>Nascetur nunc varius commodo</h3>
+              <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
+              <a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Watch</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic06.jpg" alt="" /></a>
+            <div class="inner">
+              <h3>Nascetur nunc varius commodo</h3>
+              <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
+              <a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Watch</a>
+            </div>
+          </div>
+
         </div>
-        <div class="inner">
-          <!-- Boxes -->
-          <div class="thumbnails">
-            <div class="box">
-              <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="" alt="" /></a>
-              <div class="inner">
-                <h3>Nascetur nunc varius commodo</h3>
-                <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Watch</a>
-              </div>
-            </div>
 
-            <div class="box">
-              <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic02.jpg" alt="" /></a>
-              <div class="inner">
-                <h3>Nascetur nunc varius commodo</h3>
-                <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Watch</a>
-              </div>
-            </div>
+      </div>
+    </div>
 
-            <div class="box">
-              <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic03.jpg" alt="" /></a>
-              <div class="inner">
-                <h3>Nascetur nunc varius commodo</h3>
-                <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Watch</a>
-              </div>
+    <!-- Main -->
+    <div id="main">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2 class="headline">Portfolio</h2>
+        </div>
+      </div>
+      <div class="inner">
+        <!-- Boxes -->
+        <div class="thumbnails">
+          <div class="box">
+            <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="" alt="" /></a>
+            <div class="inner">
+              <h3>Nascetur nunc varius commodo</h3>
+              <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
+              <a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Watch</a>
             </div>
+          </div>
 
-            <div class="box">
-              <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic04.jpg" alt="" /></a>
-              <div class="inner">
-                <h3>Nascetur nunc varius commodo</h3>
-                <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Watch</a>
-              </div>
+          <div class="box">
+            <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic02.jpg" alt="" /></a>
+            <div class="inner">
+              <h3>Nascetur nunc varius commodo</h3>
+              <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
+              <a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Watch</a>
             </div>
+          </div>
 
-            <div class="box">
-              <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic05.jpg" alt="" /></a>
-              <div class="inner">
-                <h3>Nascetur nunc varius commodo</h3>
-                <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Watch</a>
-              </div>
+          <div class="box">
+            <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic03.jpg" alt="" /></a>
+            <div class="inner">
+              <h3>Nascetur nunc varius commodo</h3>
+              <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
+              <a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Watch</a>
             </div>
+          </div>
 
-            <div class="box">
-              <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic06.jpg" alt="" /></a>
-              <div class="inner">
-                <h3>Nascetur nunc varius commodo</h3>
-                <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-                <a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Watch</a>
-              </div>
+          <div class="box">
+            <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic04.jpg" alt="" /></a>
+            <div class="inner">
+              <h3>Nascetur nunc varius commodo</h3>
+              <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
+              <a href="https://youtu.be/s6zR2T9vn2c" class="button style2 fit" data-poptrox="youtube,800x400">Watch</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic05.jpg" alt="" /></a>
+            <div class="inner">
+              <h3>Nascetur nunc varius commodo</h3>
+              <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
+              <a href="https://youtu.be/s6zR2T9vn2c" class="button style3 fit" data-poptrox="youtube,800x400">Watch</a>
+            </div>
+          </div>
+
+          <div class="box">
+            <a href="https://youtu.be/s6zR2T9vn2c" class="image fit"><img src="assets/images/pic06.jpg" alt="" /></a>
+            <div class="inner">
+              <h3>Nascetur nunc varius commodo</h3>
+              <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
+              <a href="https://youtu.be/s6zR2T9vn2c" class="button fit" data-poptrox="youtube,800x400">Watch</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Contact -->
-      <div class="container" id="contact">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <h2 class="headline">Contact Me</h2>
-            <h3><%= @information.contact_description %></h3>
-            <h3 class="text-center">Email: <%= @information.email %></h4>
-            <h3 class="text-center">Phone #: <%= @information.phone %></h4>
-            <p>"<%= @information.quote %>"</p>
+    <!-- Contact -->
+    <div class="container" id="contact">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <h2 class="headline">Contact Me</h2>
+          <h3><%= @information.contact_description %></h3>
+          <h3 class="text-center">Email: <%= @information.email %></h4>
+          <h3 class="text-center">Phone #: <%= @information.phone %></h4>
+          <p>"<%= @information.quote %>"</p>
 
-            <ul class="icons">
-            <% unless @information.facebook.blank? %>
-              <li><a href="<%= @information.facebook %>" class="icon fa-facebook" target="blank"><span class="label">Facebook</span></a></li>
-            <% end %>
-            <% unless @information.twitter.blank? %>
-              <li><a href="<%= @information.twitter %>" class="icon fa-twitter" target="blank"><span class="label">Twitter</span></a></li>
-            <% end %>
-            <% unless @information.instagram.blank? %>
-              <li><a href="<%= @information.instagram %>" class="icon fa-instagram" target="blank"><span class="label">Instagram</span></a></li>
-            <% end %>
-            <% unless @information.linkedin.blank? %>
-              <li><a href="<%= @information.linkedin %>" class="icon fa-linkedin" target="blank"><span class="label">LinkedIn</span></a></li>
-            <% end %>
-            <% unless @information.vimeo.blank? %>
-              <li><a href="<%= @information.vimeo %>" class="icon fa-vimeo" target="blank"><span class="label">Vimeo</span></a></li>
-            <% end %>
-            <% unless @information.youtube.blank? %>
-              <li><a href="<%= @information.youtube %>" class="icon fa-youtube" target="blank"><span class="label">YoutTube</span></a></li>
-            <% end %>
-            </ul>
-          </div>
+          <ul class="icons">
+          <% unless @information.facebook.blank? %>
+            <li><a href="<%= @information.facebook %>" class="icon fa-facebook" target="blank"><span class="label">Facebook</span></a></li>
+          <% end %>
+          <% unless @information.twitter.blank? %>
+            <li><a href="<%= @information.twitter %>" class="icon fa-twitter" target="blank"><span class="label">Twitter</span></a></li>
+          <% end %>
+          <% unless @information.instagram.blank? %>
+            <li><a href="<%= @information.instagram %>" class="icon fa-instagram" target="blank"><span class="label">Instagram</span></a></li>
+          <% end %>
+          <% unless @information.linkedin.blank? %>
+            <li><a href="<%= @information.linkedin %>" class="icon fa-linkedin" target="blank"><span class="label">LinkedIn</span></a></li>
+          <% end %>
+          <% unless @information.vimeo.blank? %>
+            <li><a href="<%= @information.vimeo %>" class="icon fa-vimeo" target="blank"><span class="label">Vimeo</span></a></li>
+          <% end %>
+          <% unless @information.youtube.blank? %>
+            <li><a href="<%= @information.youtube %>" class="icon fa-youtube" target="blank"><span class="label">YoutTube</span></a></li>
+          <% end %>
+          </ul>
         </div>
       </div>
+    </div>
 
-      <!-- Footer -->
-      <footer id="footer">
-        <div class="inner">
-          <p class="copyright"><a href="">COPYRIGHT © ERIC GONZALEZ, ALL RIGHTS RESERVED</a>.</p>
-        </div>
-      </footer>
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="inner">
+        <p class="copyright"><a href="">COPYRIGHT © ERIC GONZALEZ, ALL RIGHTS RESERVED</a>.</p>
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <%= javascript_include_tag 'jquery.scrolly.min.js' %>
@@ -214,6 +206,3 @@
     <%= javascript_include_tag 'skel.min.js' %>
     <%= javascript_include_tag 'util.js' %>
     <%= javascript_include_tag 'main.js' %>
-
-  </body>
-</html>
