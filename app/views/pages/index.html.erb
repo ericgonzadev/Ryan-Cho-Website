@@ -10,9 +10,9 @@
       <section id="banner" data-video="<%= asset_path '/banner' %>">
         <div class="inner">
           <header>
-            <h1>Ryan Cho</h1>
-            <h2>Editor. Director.</h2>
-            <p>San Francisco freelance filmmaker desiring to inspire the world</p>
+            <h1><%= @information.name %></h1>
+            <h2><%= @information.headline %></h2>
+            <p><%= @information.headline_description %></p>
           </header>
           <a href="#about" class="more">Learn More</a>
         </div>
@@ -26,7 +26,7 @@
           </div>
           <div class="col-lg-6">
             <h2 class="headline">About Me</h2>
-            <p>Hello everyone! My name is Ryan Cho, a San Francisco filmmaker. My career direction is film directing and editing. After overcoming my high school+college mental health recovery story, I discovered that I wanted to inspire the world by creating stories of meaning and inspiration through the use of cinema. I am working for a startup company, do freelance film editing and also do film production gigs. My strengths in filmmaking are music videos, feature films, documentaries, live events and startups. I love challenging myself with different projects to grow as a filmmaker. I am looking for more opportunities in the film industry. I enjoy traveling, reading books, mental health advocacy (sharing my mental health story), going out with my friends, etc. when I'm not working in the entertainment industry.</p>
+            <p><%= @information.about_me %></p>
           </div>
         </div>
       </div>
@@ -172,14 +172,30 @@
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2">
             <h2 class="headline">Contact Me</h2>
-            <h3>If you're interested in contacting me, feel free! You can contact me via email, LinkedIn, text message or messaging me on my website. Can't wait to get in contact with you! </h3>
-            <p>"Sometimes things need to fall apart to make way for better things."</p>
+            <h3><%= @information.contact_description %></h3>
+            <h3 class="text-center">Email: <%= @information.email %></h4>
+            <h3 class="text-center">Phone #: <%= @information.phone %></h4>
+            <p>"<%= @information.quote %>"</p>
 
             <ul class="icons">
-              <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-              <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-              <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-              <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+            <% unless @information.facebook.blank? %>
+              <li><a href="<%= @information.facebook %>" class="icon fa-facebook" target="blank"><span class="label">Facebook</span></a></li>
+            <% end %>
+            <% unless @information.twitter.blank? %>
+              <li><a href="<%= @information.twitter %>" class="icon fa-twitter" target="blank"><span class="label">Twitter</span></a></li>
+            <% end %>
+            <% unless @information.instagram.blank? %>
+              <li><a href="<%= @information.instagram %>" class="icon fa-instagram" target="blank"><span class="label">Instagram</span></a></li>
+            <% end %>
+            <% unless @information.linkedin.blank? %>
+              <li><a href="<%= @information.linkedin %>" class="icon fa-linkedin" target="blank"><span class="label">LinkedIn</span></a></li>
+            <% end %>
+            <% unless @information.vimeo.blank? %>
+              <li><a href="<%= @information.vimeo %>" class="icon fa-vimeo" target="blank"><span class="label">Vimeo</span></a></li>
+            <% end %>
+            <% unless @information.youtube.blank? %>
+              <li><a href="<%= @information.youtube %>" class="icon fa-youtube" target="blank"><span class="label">YoutTube</span></a></li>
+            <% end %>
             </ul>
           </div>
         </div>

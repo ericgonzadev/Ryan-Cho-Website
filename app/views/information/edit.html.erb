@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="model col-lg-6 col-lg-offset-3">
+      <h1><u>Edit Information Data</u></h1>
+      <p class="text-center"><span>Leave field blank if you want nothing to be displayed</span></p>
+
+      <%= form_for(@information) do |f| %> 
+        <%= f.label :name %>
+        <%= f.text_field :name %><br>
+
+        <%= f.label :headline %>
+        <%= f.text_field :headline %><br>
+
+        <%= f.label :headline_description, "Headline Description" %>
+        <%= f.text_field :headline_description %><br>
+
+        <%= f.label :about_me, "About Me" %>
+        <%= f.text_area :about_me, style: "resize: none;", rows: "10" %><br>
+
+        <%= f.label :contact_description, "Contact Description" %>
+        <%= f.text_area :contact_description, style: "resize: none;", rows: "5" %><br>
+
+        <%= f.label :email %>
+        <%= f.text_field :email %><br>
+
+        <%= f.label :phone, "Phone Number" %>
+        <%= f.text_field :phone %><br>
+
+        <%= f.label :quote %>
+        <%= f.text_field :quote %><br>
+
+        <%= f.label :facebook %>
+        <%= f.text_field :facebook %><br>
+
+        <%= f.label :instagram %>
+        <%= f.text_field :instagram %><br>
+
+        <%= f.label :twitter %>
+        <%= f.text_field :twitter %><br>
+
+        <%= f.label :linkedin, "LinkedIn" %>
+        <%= f.text_field :linkedin %><br>
+
+        <%= f.label :vimeo %>
+        <%= f.text_field :vimeo %><br>
+
+        <%= f.label :youtube, "YoutTube" %>
+        <%= f.text_field :youtube %><br>
+
+        <div class="col-lg-6">
+          <%= f.submit "Update", class: "btn btn-success btn-lg", style: "margin-bottom: 30px;" %>
+        </div>
+        <div class="col-lg-6">
+          <a href="/information" class="btn btn-danger btn-lg">Cancel</a>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+</div>

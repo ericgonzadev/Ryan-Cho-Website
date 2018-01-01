@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <%= link_to "Go Back To Homepage", root_path, class: "btn btn-success", style: "margin-top: 20px;" %>
+    <div class="model col-lg-12">
+      <h1><u>Information Data</u></h1>
+      <h1><%= link_to "Edit", information_edit_path, class: "btn btn-primary btn-lg" %></h1>
+      <p><span>Name:</span> <%= @information.name %></p>
+      <p><span>Headline:</span> <%= @information.headline %></p>
+      <p><span>Headline Description:</span> <%= @information.headline_description %></p>
+      <p><span>About Me:</span> <%= @information.about_me %></p>
+      <p><span>Contact Description:</span> <%= @information.contact_description %></p>
+      <p><span>Quote:</span> "<%= @information.quote %>"</p>
+      <p><span>Facebook:</span> <%= @information.facebook %></p>
+      <p><span>Instagram Description:</span> <%= @information.instagram %></p>
+      <p><span>Twitter:</span> <%= @information.twitter %></p>
+      <p><span>LinkedIn:</span> <%= @information.linkedin %></p>
+      <p><span>Vimeo:</span> <%= @information.vimeo %></p>
+      <p><span>YouTube:</span> <%= @information.youtube %></p>
+    </div>
+  </div>
+</div>
+
