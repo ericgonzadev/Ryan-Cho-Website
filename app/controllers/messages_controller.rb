@@ -7,6 +7,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     if @message.save
+      MessageMailer.send_message(@message).deliver_now
       flash[:success] = "Message Received! I will be in touch with you soon."
       redirect_to "/#contact"
     else
