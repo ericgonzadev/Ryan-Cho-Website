@@ -383,6 +383,8 @@
 		padding: 0 1em;
 		text-decoration: none;
 		width: 100%;
+		background: white;
+		color: black;
 	}
 
 		input[type="text"]:invalid,
@@ -440,8 +442,14 @@
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
+	textarea,
 	select {
-		height: 2.75em;
+		font-size: 1.3em;
+	}
+
+	select {
+		background: white;
+		color: black;
 	}
 
 	textarea {
@@ -1331,4 +1339,16 @@
 	.model span{
 		color: lightgreen;
 		font-weight: bold;
+	}
+
+	.model label{		
+		font-size: 18px;
+	}
+
+	.model .required{
+		color: red;
+	}
+
+	.model ul{
+		list-style: none;
 	}

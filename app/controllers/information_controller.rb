@@ -1,4 +1,5 @@
 class InformationController < ApplicationController
+  
   def index
     @information = Information.first
   end
@@ -10,7 +11,7 @@ class InformationController < ApplicationController
   def update
     @information = Information.find(params[:id])
     @information.update(information_params)
-    redirect_to '/information'
+    redirect_to information_index_path
   end
 
 private

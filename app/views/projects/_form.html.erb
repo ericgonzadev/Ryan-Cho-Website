@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row text-center">
+    <div class="model col-lg-6 col-lg-offset-3">
+      <h1><u><%= title %></u></h1>
+      <span><span class="required">* </span>fields are required</span><br>
+
+      <%= form_for(@project) do |f| %> 
+        <% if @project.errors.any? %>
+          <div id="error_explanation">
+            <div class="alert alert-danger">
+              The form contains <%= pluralize(@project.errors.count, "error") %>.
+            </div>
+            <ul id="errors">
+            <% @project.errors.full_messages.each do |msg| %>
+              <li class="required"><%= msg %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <label>Video Link <span class="required">*</span></label>
+        <%= f.text_field :link, required: true %><br>
+
+        <label>Video Source (Select One)<span class="required">*</span></label>
+        <%= f.select :video_source, [ 'YouTube', 'Vimeo'] %><br>
+
+        <label>Title <span class="required">*</span></label>
+        <%= f.text_field :title, required: true %><br>
+
+        <%= f.label :description %>
+        <%= f.text_area :description, style: "resize: none;", rows: "5" %><br>
+
+        <label>Type of Work (Select One)<span class="required">*</span></label>
+        <%= f.select :work_type, [ 'Freelance Work', 'Portfolio'] %><br>
+
+        <label>Order (<span class="required"> Must be a number greater than 0</span>)</label>
+        <span>Note: If order field left blank, this video will be added to the end of the order</span>
+        <%= f.text_field :order_listed %><br>
+
+        <div class="col-lg-6">
+          <%= f.submit button, class: "btn btn-success btn-lg", style: "margin-bottom: 30px;" %>
+        </div>
+
+        <% if button == "Create" %>
+          <div class="col-lg-6">
+            <a href="/projects" class="btn btn-danger btn-lg">Cancel</a>
+          </div>
+        <% elsif button == "Update" %>
+          <div class="col-lg-6">
+            <%= link_to "Delete", @project, method: :delete, data: { confirm: "Are you sure you want to delete this project?" }, class: "btn btn-danger btn-lg" %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
