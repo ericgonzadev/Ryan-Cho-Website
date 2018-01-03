@@ -56,13 +56,61 @@
     <!-- Contact -->
     <div class="container" id="contact">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
+        <div class="col-lg-6 col-lg-offset-3">
           <h2 class="headline">Contact Me</h2>
           <h3><%= @information.contact_description %></h3>
-          <h3 class="text-center">Email: <%= @information.email %></h4>
-          <h3 class="text-center">Phone #: <%= @information.phone %></h4>
-          <p>"<%= @information.quote %>"</p>
+          <h3 class="text-center"><span>Email:</span> <%= @information.email %></h4>
+          <h3 class="text-center"><span>Phone #:</span> <%= @information.phone %></h3>
 
+          <ul class="icons">
+          <% unless @information.linkedin.blank? %>
+            <li><a href="<%= @information.linkedin %>" class="icon fa-linkedin" target="blank"><span class="label">LinkedIn</span></a></li>
+          <% end %>
+          <% unless @information.vimeo.blank? %>
+            <li><a href="<%= @information.vimeo %>" class="icon fa-vimeo" target="blank"><span class="label">Vimeo</span></a></li>
+          <% end %>
+          <% unless @information.youtube.blank? %>
+            <li><a href="<%= @information.youtube %>" class="icon fa-youtube" target="blank"><span class="label">YoutTube</span></a></li>
+          <% end %>
+          </ul>
+
+          <div class="text-center">
+            <%= form_for(@message) do |f| %> 
+              <% if flash.key?("success") %>
+                <% flash.each do |message_type, message| %>
+                  <%= content_tag(:div, message, class: "alert alert-#{message_type} text-center", id: "body-up", style: "font-size: 17px;") %>
+                <% end %>
+              <% else %>
+                <h3>You can also get in touch with me by filling out the form below</h3>
+                <span>( Fields with <span class="required">*</span> are required )</span><br>
+                <% flash.each do |message_type, message| %>
+                  <% messages = message.split("=") %>
+                  <div class="alert alert-danger text-center" id="body-up", style="font-size: 17px;"><%= messages[0] %><br><%= messages[1] %><br><%= messages[2] %></div>                
+                <% end %>
+
+                <label>Name <span class="required">*</span></label>
+                <%= f.text_field :name, required: true, placeholder: "" %><br>
+
+                <label>Email <span class="required">*</span></label>
+                <%= f.text_field :email, type: "email", required: true %><br>
+
+                <%= f.label :subject %>
+                <%= f.text_field :subject %><br>
+
+                <label>Message <span class="required">*</span></label>
+                <%= f.text_area :message, style: "resize: none;", rows: "10", required: true %><br>
+
+                <label>Captcha <span class="required">*</span></label>
+                <%= image_tag "captcha.png", style: "margin-bottom: 5px;" %>
+                <%= f.text_field :captcha, required: true %><br>
+
+                <%= f.submit "Send", class: "btn btn-success btn-lg" %>
+              <% end %>
+            <% end %>
+          </div>
+
+          <p>"<%= @information.quote %>"</p>
+          
           <ul class="icons">
           <% unless @information.facebook.blank? %>
             <li><a href="<%= @information.facebook %>" class="icon fa-facebook" target="blank"><span class="label">Facebook</span></a></li>
@@ -72,15 +120,6 @@
           <% end %>
           <% unless @information.instagram.blank? %>
             <li><a href="<%= @information.instagram %>" class="icon fa-instagram" target="blank"><span class="label">Instagram</span></a></li>
-          <% end %>
-          <% unless @information.linkedin.blank? %>
-            <li><a href="<%= @information.linkedin %>" class="icon fa-linkedin" target="blank"><span class="label">LinkedIn</span></a></li>
-          <% end %>
-          <% unless @information.vimeo.blank? %>
-            <li><a href="<%= @information.vimeo %>" class="icon fa-vimeo" target="blank"><span class="label">Vimeo</span></a></li>
-          <% end %>
-          <% unless @information.youtube.blank? %>
-            <li><a href="<%= @information.youtube %>" class="icon fa-youtube" target="blank"><span class="label">YoutTube</span></a></li>
           <% end %>
           </ul>
         </div>
