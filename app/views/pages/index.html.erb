@@ -59,8 +59,8 @@
         <div class="col-lg-6 col-lg-offset-3">
           <h2 class="headline">Contact Me</h2>
           <h3><%= @information.contact_description %></h3>
-          <h3 class="text-center"><span>Email:</span> <%= @information.email %></h4>
-          <h3 class="text-center"><span>Phone #:</span> <%= @information.phone %></h3>
+          <h3 class="text-center"><span>Email:</span> <a href="mailto:ryancho508@gmail.com?subject=Service Request"><%= @information.email %></a></h4>
+          <h3 class="text-center"><span>Phone #:</span> <a href="tel:+1-<%= @information.phone %>"><%= @information.phone %></a></h3>
 
           <ul class="icons">
           <% unless @information.linkedin.blank? %>
