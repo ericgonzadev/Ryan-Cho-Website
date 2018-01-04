@@ -4,9 +4,11 @@
     <title>Ryan Cho</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta property="og:image" content="<%= asset_path 'banner.jpg' %>">
     <meta property="og:title" content="Ryan Cho's Website" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="<%= image_url 'banner.jpg' %>">
     <meta property="og:description" content="Hello everyone! My name is Ryan Cho, a San Francisco filmmaker. My career direction is film directing and editing." />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- Favicons -->
     <%= favicon_link_tag 'favicon.ico' %> 
