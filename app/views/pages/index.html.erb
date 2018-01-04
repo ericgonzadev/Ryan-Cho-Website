@@ -107,21 +107,23 @@
                 <%= f.submit "Send", class: "btn btn-success btn-lg" %>
               <% end %>
             <% end %>
-          </div>
-
-          <p>"<%= @information.quote %>"</p>
+          </div><br>
           
-          <ul class="icons">
-          <% unless @information.facebook.blank? %>
-            <li><a href="<%= @information.facebook %>" class="icon fa-facebook" target="blank"><span class="label">Facebook</span></a></li>
+          <% if !@information.facebook.blank? || !@information.twitter.blank? || !@information.instagram.blank? %>
+            <ul class="icons">
+              <p id="social">Follow me on social media:</p>
+            <% unless @information.facebook.blank? %>
+              <li><a href="<%= @information.facebook %>" class="icon fa-facebook" target="blank"><span class="label">Facebook</span></a></li>
+            <% end %>
+            <% unless @information.twitter.blank? %>
+              <li><a href="<%= @information.twitter %>" class="icon fa-twitter" target="blank"><span class="label">Twitter</span></a></li>
+            <% end %>
+            <% unless @information.instagram.blank? %>
+              <li><a href="<%= @information.instagram %>" class="icon fa-instagram" target="blank"><span class="label">Instagram</span></a></li>
+            <% end %>
+              <p><span>"<%= @information.quote %>"</span></p>
+            </ul>
           <% end %>
-          <% unless @information.twitter.blank? %>
-            <li><a href="<%= @information.twitter %>" class="icon fa-twitter" target="blank"><span class="label">Twitter</span></a></li>
-          <% end %>
-          <% unless @information.instagram.blank? %>
-            <li><a href="<%= @information.instagram %>" class="icon fa-instagram" target="blank"><span class="label">Instagram</span></a></li>
-          <% end %>
-          </ul>
         </div>
       </div>
     </div>
