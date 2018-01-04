@@ -1,5 +1,7 @@
 class ProjectsController < ApplicationController
 
+  before_action :authenticate
+
   def index
     @freelance_work = Project.retrieve_projects("Freelance Work")
     @portfolio = Project.retrieve_projects("Portfolio")

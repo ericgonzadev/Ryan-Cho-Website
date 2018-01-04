@@ -1,5 +1,7 @@
 class MessagesController < ApplicationController
 
+  before_action :authenticate, only: [:index, :destroy]
+
   def index
     @messages = Message.all
   end
