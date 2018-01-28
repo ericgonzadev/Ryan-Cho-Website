@@ -9,6 +9,8 @@
       <p><span>Headline:</span> <%= @information.headline %></p>
       <p><span>Headline Description:</span> <%= @information.headline_description %></p>
       <p><span>About Me:</span> <%= @information.about_me %></p>
+      <p><span>About Image:</span></p>
+      <%= image_tag(@information.about_image? ? @information.about_image.url : asset_path('about.jpg')) %><br><br>
       <p><span>Contact Description:</span> <%= @information.contact_description %></p>
       <p><span>Email:</span> <%= @information.email %></p>
       <p><span>Phone Number:</span> <%= @information.phone %></p>

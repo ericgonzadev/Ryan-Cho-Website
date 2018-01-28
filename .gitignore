@@ -23,5 +23,8 @@
 # Ignore .DS_Store
 .DS_Store
 
- Ignore development Enviromental Variables.
+# Ignore development Enviromental Variables.
 /config/local_env.yml
+
+# Ignore uploaded test images.
+/public/uploads

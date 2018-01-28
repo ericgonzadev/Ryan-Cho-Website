@@ -17,6 +17,10 @@
         <%= f.label :about_me, "About Me" %>
         <%= f.text_area :about_me, style: "resize: none;", rows: "10" %><br>
 
+        <%= f.label :about_image, "About Image" %>
+        <%= f.file_field :about_image, accept: 'image/jpeg,image/gif,image/png' %>
+        <p><b>Current Header Image:</b><%= image_tag(@information.about_image? ? @information.about_image.url : asset_path('about.jpg'), style: 'width: 100%') %></p><br>
+
         <%= f.label :contact_description, "Contact Description" %>
         <%= f.text_area :contact_description, style: "resize: none;", rows: "5" %><br>
 
