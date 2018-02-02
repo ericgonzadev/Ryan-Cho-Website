@@ -21,7 +21,7 @@ private
   def information_params
     params.require(:information).permit(:name, :headline, :headline_description, 
       :about_me, :contact_description, :email, :phone, :quote, :facebook, 
-      :instagram, :twitter, :linkedin, :vimeo, :youtube, :about_image)
+      :instagram, :twitter, :linkedin, :vimeo, :youtube, :about_image, :resume)
   end
 
 end

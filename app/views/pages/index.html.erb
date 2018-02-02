@@ -18,7 +18,11 @@
         </div>
         <div class="col-lg-6">
           <h2 class="headline">About Me</h2>
-          <p><%= @information.about_me %></p>
+          <p><%= @information.about_me %> 
+            <% unless @information.resume.blank? %>
+              Feel free to checkout my <%= link_to "resume", @information.resume, style: "color: #8ce1ff", target: "blank" %>
+            <% end %>
+          </p>
         </div>
       </div>
     </div>
@@ -71,6 +75,9 @@
           <% end %>
           <% unless @information.youtube.blank? %>
             <li><a href="<%= @information.youtube %>" class="icon fa-youtube" target="blank"><span class="label">YoutTube</span></a></li>
+          <% end %>
+          <% unless @information.resume.blank? %>
+            <li><a href="<%= @information.resume %>" class="icon fa-file-text" target="blank"><span class="label">Resume</span></a></li>
           <% end %>
           </ul>
 
