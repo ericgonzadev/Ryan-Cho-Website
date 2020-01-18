@@ -13,9 +13,9 @@ class MessagesController < ApplicationController
       flash[:success] = "Message Received! I will be in touch with you soon."
       redirect_to "/#contact"
     else
-      if (message_params["name"].blank? || message_params["email"].blank? || message_params["message"].blank? || message_params["captcha"].blank?) && (message_params["captcha"] =~ /\Aw68hp\z/i).nil?
+      if (message_params["name"].blank? || message_params["email"].blank? || message_params["message"].blank? || message_params["captcha"].blank?) && (message_params["captcha"] =~ /\Aczarface\z/i).nil?
         flash[:danger] = "ERRORS=- Required field was left blank=- Captcha text did not match image text"
-      elsif (message_params["captcha"] =~ /\Aw68hp\z/i).nil?
+      elsif (message_params["captcha"] =~ /\Aczarface\z/i).nil?
         flash[:danger] = "ERROR=- Captcha text did not match image text"
       elsif message_params["name"].blank? || message_params["email"].blank? || message_params["message"].blank? || message_params["captcha"].blank?
         flash[:danger] = "ERROR=- Required field was left blank"
